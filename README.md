@@ -35,7 +35,15 @@ In `app/views/blogs/show.html.hbs`:
       {{{ blog/body }}}
       <footer>
         by {{{ link_to blog/author/name blog/author }}}
+      </footer>
     </article>
+    
+If you need to use the files in javascript (for example, if you were to 
+update the page using a ajax/json call), you can access the templates
+in javascript via: 
+  
+    Handlebars.templates.blogs.show(someContext);
+
 
 ### Usage Gotchas ###
 
